@@ -4,7 +4,7 @@ let channelsData = [
     placeHolderImg: "images/beIn sports 1.jpg",
     category: "sports",
     channelName: "beIn sports 1",
-    contentType: "action. adventure. fantasy.",
+    contentType: "sports. football. live.",
     channelUrl: "https://diflucantab.com/channel.html?id=yayinstar",
   },
   {
@@ -12,7 +12,7 @@ let channelsData = [
     placeHolderImg: "images/beIn sports 2.jpg",
     category: "sports",
     channelName: "beIn sports 2",
-    contentType: "action. adventure. fantasy.",
+    contentType: "sports. cricket. live.",
     channelUrl: "https://diflucantab.com/channel.html?id=yayinb2",
   },
   {
@@ -20,7 +20,7 @@ let channelsData = [
     placeHolderImg: "images/beIn sports 3.jpg",
     category: "sports",
     channelName: "beIn sports 3",
-    contentType: "action. adventure. fantasy.",
+    contentType: "sports. hockey. live.",
     channelUrl: "https://diflucantab.com/channel.html?id=yayinb3",
   },
   {
@@ -28,7 +28,7 @@ let channelsData = [
     placeHolderImg: "images/beIn sports 4.jpg",
     category: "sports",
     channelName: "beIn sports 4",
-    contentType: "action. adventure. fantasy.",
+    contentType: "sports channel. live. badminton.",
     channelUrl: "https://diflucantab.com/channel.html?id=yayinb4",
   },
   {
@@ -36,7 +36,7 @@ let channelsData = [
     placeHolderImg: "images/beIn sports 5.jpg",
     category: "sports",
     channelName: "beIn sports 5",
-    contentType: "action. adventure. fantasy.",
+    contentType: "sports. games. live.",
     channelUrl: "https://diflucantab.com/channel.html?id=yayinb5",
   },
   {
@@ -44,7 +44,7 @@ let channelsData = [
     placeHolderImg: "images/BeIn Max1.jpg",
     category: "entertainment",
     channelName: "BeIn Max1",
-    contentType: "action. adventure. fantasy.",
+    contentType: "action. adventure. live.",
     channelUrl: "https://diflucantab.com/channel.html?id=yayinbm1",
   },
   {
@@ -52,7 +52,7 @@ let channelsData = [
     placeHolderImg: "images/BeIn Max2.jpg",
     category: "entertainment",
     channelName: "BeIn Max2",
-    contentType: "action. adventure. fantasy.",
+    contentType: "entertainment. action. adventure. live.",
     channelUrl: "https://diflucantab.com/channel.html?id=yayinbm2",
   },
   {
@@ -60,7 +60,9 @@ let channelsData = [
     placeHolderImg: "images/S Sport.jpg",
     category: "sports",
     channelName: "S Sport",
-    contentType: "action. adventure. fantasy.",
+    contentType: "sports. games. fun. live.",
     channelUrl: "https://diflucantab.com/channel.html?id=yayinss",
   },
 ];
+
+export default channelsData;

@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./CSS/IframeCard.module.css";
-const IframeCard = () => {
+const IframeCard = (props) => {
   return (
-    <div className={styles.cardContainer}>
-      <img className={styles.cardImage} src="./images/nature.jpg" alt="" />
-      <div className={styles.text}>most popular</div>
+    <div className={styles.cardContainer} onClick={props.onClick}>
+      <img className={styles.cardImage} src={props.image} alt="" />
+      <div className={styles.text}>{props.title}</div>
     </div>
   );
 };
