@@ -1,0 +1,14 @@
+.nav {
+  z-index: 5000;
+}
+.ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 500px;
+}
+.li {
+  list-style: none;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+}
