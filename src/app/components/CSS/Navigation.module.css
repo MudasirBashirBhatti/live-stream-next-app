@@ -7,8 +7,22 @@
   align-items: center;
   width: 500px;
 }
+.ul .li:nth-child(1) {
+  color: white;
+}
 .li {
   list-style: none;
   cursor: pointer;
-  color: rgb(255, 255, 255);
+  color: rgba(255, 255, 255, 0.719);
+  transition: 0.3s;
+  text-decoration: none;
+}
+.li:hover {
+  color: white;
+}
+
+@media screen and (max-width: 722px) {
+  .ul {
+    display: none;
+  }
 }

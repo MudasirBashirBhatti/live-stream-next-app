@@ -36,3 +36,16 @@
   transform: translate(-50%, -50%) scale(0);
   transition: 0.3s;
 }
+
+@media screen and (max-width: 638px) {
+  .cardContainer {
+    width: 128px;
+  }
+}
+
+@media screen and (max-width: 408px) {
+  .cardContainer {
+    width: 250px;
+    height: 140px;
+  }
+}

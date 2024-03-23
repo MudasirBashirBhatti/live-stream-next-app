@@ -6,4 +6,10 @@
 }
 body {
   padding: 2em;
+  background-color: black;
+}
+@media screen and (max-width: 476px) {
+  body {
+    padding: 0.5em;
+  }
 }
