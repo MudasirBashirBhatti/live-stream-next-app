@@ -1,0 +1,49 @@
+.parent {
+  width: 300px;
+  background-color: white;
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 2em 1em;
+  border-radius: 20px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.74);
+  z-index: 6000;
+  transition: 0.5s;
+}
+.link {
+  color: black;
+}
+@keyframes infoContainer {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.02);
+  }
+}
+.infoCross {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  color: red;
+  cursor: pointer;
+}
+.siteName {
+  text-align: center;
+  color: blueviolet;
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding-bottom: 0.3em;
+}
+.innerSection {
+  margin-top: 0.6em;
+}
+.heading {
+  color: blueviolet;
+}
+.content {
+  color: black;
+  font-size: 0.9rem;
+}

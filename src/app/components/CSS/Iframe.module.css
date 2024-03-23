@@ -116,7 +116,6 @@
   justify-content: flex-end;
   transition: 0.5s;
 }
-
 @media screen and (max-width: 806px) {
   .iframeContentContainer {
     flex-direction: column;
