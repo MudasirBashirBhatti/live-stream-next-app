@@ -2,7 +2,8 @@
 import Link from "next/link";
 import styles from "./CSS/Navigation.module.css";
 import { useState } from "react";
-export const Navigation = () => {
+import { RxHamburgerMenu } from "react-icons/rx";
+export const Navigation = (props) => {
   const [activeIndex, setactiveIndex] = useState(0);
   let navElem = [
     {
@@ -34,6 +35,7 @@ export const Navigation = () => {
       <ul className={styles.ul}>
         {navElem.map((e, index) => (
           <Link
+            key={index}
             href={`${e.href}`}
             className={styles.li}
             onClick={() => detect(index)}
@@ -48,6 +50,7 @@ export const Navigation = () => {
           </Link>
         ))}
       </ul>
+      <RxHamburgerMenu className={styles.hamburger} onClick={props.onClick} />
     </nav>
   );
 };
