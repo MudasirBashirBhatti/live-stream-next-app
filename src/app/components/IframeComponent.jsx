@@ -11,6 +11,9 @@ const IframeComponent = () => {
   const [category, setcategory] = useState("sports");
   const [channelName, setchannelName] = useState("BEIN SPORTS1");
   const [others, setothers] = useState("sports. football. live.");
+  const [moreInfoContent, setmoreInfoContent] = useState(
+    "Premier destination for live football matches globally. Exclusive coverage, expert analysis, and thrilling action. Your ultimate football experience!"
+  );
   const [scale, setscale] = useState("1");
   const [contentContainerPosition, setcontentContainerPosition] = useState("1");
   const [iframeLeftContainer, setiframeLeftContainer] = useState("0%");
@@ -19,7 +22,7 @@ const IframeComponent = () => {
   const [tvDisplay, settvDisplay] = useState("none");
   const [moreInfoDetail, setmoreInfoDetail] = useState("0px");
   const [moreInfoText, setmoreInfoText] = useState("More Info");
-  const [activeCardIndex, setactiveCardIndex] = useState(null);
+  const [activeCardIndex, setactiveCardIndex] = useState(0);
 
   // function to hide iframe above content and pictures
   function hideIframeElements() {
@@ -49,6 +52,7 @@ const IframeComponent = () => {
       setcategory(`${value.category}`);
       setchannelName(`${value.channelName}`);
       setothers(`${value.contentType}`);
+      setmoreInfoContent(`${value.description}`);
       setscale(`1`);
       setcontentContainerPosition("1");
     }, 500);
@@ -99,12 +103,7 @@ const IframeComponent = () => {
               style={{ height: `${moreInfoDetail}` }}
             >
               <img src="images/live.png" alt="" />
-              <div>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam
-                error nemo doloribus non rerum architecto reiciendis alias,
-                adipisci velit, temporibus inventore debitis sint facilis cumque
-                nobis iusto incidunt, molestias aut.
-              </div>
+              <div>{moreInfoContent}</div>
             </div>
           </div>
           {/* tv iframe */}
