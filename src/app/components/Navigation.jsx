@@ -1,24 +1,52 @@
+"use client";
 import Link from "next/link";
 import styles from "./CSS/Navigation.module.css";
+import { useState } from "react";
 export const Navigation = () => {
+  const [activeIndex, setactiveIndex] = useState(0);
+  let navElem = [
+    {
+      href: "/",
+      title: "Movies",
+    },
+    {
+      href: "/tv-series",
+      title: "TV SERIES",
+    },
+    {
+      href: "/channels",
+      title: "CHANNELS",
+    },
+    {
+      href: "/our-apps",
+      title: "Apps",
+    },
+    {
+      href: "more-settings",
+      title: "Settings",
+    },
+  ];
+  let detect = (index) => {
+    setactiveIndex(index);
+  };
   return (
     <nav className={styles.navigation}>
       <ul className={styles.ul}>
-        <Link href="/" className={styles.li}>
-          MOVIES
-        </Link>
-        <Link href="/tv-series" className={styles.li}>
-          TV SERIES
-        </Link>
-        <Link href="/channels" className={styles.li}>
-          CHANNELS
-        </Link>
-        <Link href="/our-apps" className={styles.li}>
-          APPS
-        </Link>
-        <Link href="/more-settings" className={styles.li}>
-          SETTINGS
-        </Link>
+        {navElem.map((e, index) => (
+          <Link
+            href={`${e.href}`}
+            className={styles.li}
+            onClick={() => detect(index)}
+            style={{
+              color: `${
+                activeIndex === index ? "white" : "rgba(255, 255, 255, 0.719)"
+              }`,
+              fontWeight: `${activeIndex === index ? "700" : ""}`,
+            }}
+          >
+            {e.title}
+          </Link>
+        ))}
       </ul>
     </nav>
   );
