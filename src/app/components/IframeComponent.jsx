@@ -19,6 +19,7 @@ const IframeComponent = () => {
   const [tvDisplay, settvDisplay] = useState("none");
   const [moreInfoDetail, setmoreInfoDetail] = useState("0px");
   const [moreInfoText, setmoreInfoText] = useState("More Info");
+  const [activeCardIndex, setactiveCardIndex] = useState(null);
 
   // function to hide iframe above content and pictures
   function hideIframeElements() {
@@ -32,7 +33,7 @@ const IframeComponent = () => {
     }, 600);
   }
 
-  function myFunc(value) {
+  function myFunc(value, index) {
     setchannelUrl(value.channelUrl);
     setscale(`1.3`);
     setcontentContainerPosition("0");
@@ -51,6 +52,8 @@ const IframeComponent = () => {
       setscale(`1`);
       setcontentContainerPosition("1");
     }, 500);
+
+    setactiveCardIndex(index);
   }
 
   // function for more info button
@@ -123,11 +126,12 @@ const IframeComponent = () => {
 
         {/* right section */}
         <div className={styles.rightContainer}>
-          {channelsData.map((e) => (
+          {channelsData.map((e, index) => (
             <IframeCard
               image={e.placeHolderImg}
               title={e.category}
-              onClick={() => myFunc(e)}
+              onClick={() => myFunc(e, index)}
+              scale={activeCardIndex === index ? "1" : "0"}
             />
           ))}
         </div>
@@ -135,5 +139,4 @@ const IframeComponent = () => {
     </div>
   );
 };
-
 export default IframeComponent;
